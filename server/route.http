@@ -1,0 +1,27 @@
+GET http://localhost:3000/user/signup
+
+###
+
+POST http://localhost:3000/user/signup
+Content-Type: application/json
+
+{
+    "name": "teja",
+    "email": "teja@gmail.com",
+    "password": "teja0#"
+}
+
+###
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email": "teja@gmail.com",
+    "password": "teja0#"
+}
+
+###
+
+GET http://localhost:3000/user/tasks
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MzAxODExOTYsImV4cCI6MTczMDE4NDc5Nn0.aUQQQxymomsoogQoPv5AaoguHW5CJqbs0HWde0h5sEQ"
