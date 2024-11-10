@@ -1,0 +1,49 @@
+GET http://localhost:3001/user/all
+
+###
+
+GET http://localhost:3001/user/jhfkajh
+
+###
+POST http://localhost:3001/user/signup
+Content-Type: application/json
+
+{
+    "name": "teja",
+    "email": "teja@gmail.com",
+    "password": "teja0#"
+}
+
+###
+
+POST http://localhost:3001/user/login
+Content-Type: application/json
+
+{
+    "email": "teja@gmail.com",
+    "password": "teja0"
+}
+
+###
+
+POST http://localhost:3001/user/tasks/6730c32d2c086abaf4d0d004
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MzBjMzJkMmMwODZhYmFmNGQwZDAwNCIsImlhdCI6MTczMTI1MTE5OX0.jt4-igjCnGGeOLI3_8DyEUPTqBE0aERi0Jlsq7v5trU
+Content-Type: application/json
+
+{   
+    "task": "learn html",
+    "task_name": "EDU"
+}
+
+###
+PATCH http://localhost:3001/user/taskUpdate/672c48aa5ba498c6d5f77c9d/task/672c48d05ba498c6d5f77ca3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlamFAZ21haWwuY29tIiwiaWF0IjoxNzMwOTc1MjQ0LCJleHAiOjE3MzA5Nzg4NDR9.YWkAv9ku42xImi8s_E2ybIT2bflXpQY7LV_yLn4Um0g
+Content-Type: application/json
+
+{   
+    "task": "learn mongodb"
+}
+
+###
+GET http://localhost:3001/user/teja@gmail.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlamFAZ21haWwuY29tIiwiaWF0IjoxNzMwOTcxNTA5LCJleHAiOjE3MzA5NzUxMDl9.BgdrR1diHLsc62jZ42lrcFl7YC9g0WSek5AgnVD6Ko4

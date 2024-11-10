@@ -3,6 +3,18 @@ const taskSchema = new mongoose.Schema({
     task: {
         type: String,
         required: true
+    },
+    task_name: {
+        type: String,
+        required: true
+    },
+    created: {
+        type: Date,
+        default: Date.now
+    },
+    updated: {
+        type: Date,
+        default: Date.now
     }
 })
 const userSchema = new mongoose.Schema({
@@ -13,7 +25,8 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         unique: true,
-        required: true
+        required: true,
+        lowercase: true
     },
     password: {
         type: String,
